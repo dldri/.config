@@ -1,5 +1,7 @@
 # dldri.config
 Personal Configuration Files
+> Get Started
+>
 > Open cmd and run the following
 > ```gh repo clone dldri/dldri.config ./.config```
 
