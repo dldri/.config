@@ -11,3 +11,5 @@ Personal Configuration Files
 - whkd
 - Kanata
   - Includes ```run_kanata.bat``` that runs Kanata minimised - reading the configuration file from the local repo.
+- Neovim
+  - Set ```XDG_CONFIG_HOME``` = ```%USERPROFILE%/.config/nvim```
