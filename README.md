@@ -9,6 +9,7 @@ Personal Configuration Files
 - Komorebi
   - Set ```KOMOREBI_CONFIG_HOME``` = ```%USERPROFILE%/.config/komorebi```
 - whkd
+  - Set ```WHKD_CONFIG_HOME``` = ```%USERPROFILE$/.config/whkd```
 - Kanata
   - Includes ```run_kanata.bat``` that runs Kanata minimised - reading the configuration file from the local repo.
 - Neovim
