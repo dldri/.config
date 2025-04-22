@@ -42,9 +42,9 @@
     },
   ],
   "bar_configurations": [
-    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor1.json"
-    // "C:/Users/Dio.Luwandri/komorebi.bar.monitor2.json",
-    // "C:/Users/Dio.Luwandri/komorebi.bar.monitor3.json",
-    // "C:/Users/Dio.Luwandri/komorebi.bar.monitor4.json"
+    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor1.json",
+    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor2.json",
+    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor3.json",
+    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor4.json"
   ]
 }

@@ -1,4 +1,4 @@
-# dldri.config
+# dldri/.config
 Personal Configuration Files
 > # Get Started
 >
@@ -13,4 +13,4 @@ Personal Configuration Files
 - Kanata
   - Includes ```run_kanata.bat``` that runs Kanata minimised - reading the configuration file from the local repo.
 - Neovim
-  - Set ```XDG_CONFIG_HOME``` = ```%USERPROFILE%/.config/nvim```
+  - Set ```XDG_CONFIG_HOME``` = ```%USERPROFILE%/.config```
