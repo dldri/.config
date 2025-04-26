@@ -8,7 +8,7 @@ Personal Configuration Files
 
 # Profiles
 - Powershell pwsh
-  - Create  ```$PROFILE``` and copy the content of ```profile.ps1```.
+  - Create  ```$PROFILE``` and copy the content of ```pwsh/profile.ps1```.
 
 # Current Applications
 - Komorebi
