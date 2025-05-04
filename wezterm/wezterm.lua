@@ -8,16 +8,43 @@ end
 
 -- Appearance: Catppuccin Mocha with black background
 config.color_scheme = "Catppuccin Mocha"
-config.colors.background = "#000000"
+config.colors = {
+	background = "black",
+}
 config.font = wezterm.font("JetBrains Mono")
 config.font_size = 14
-config.window_decorations = "NONE" -- No minimize/close/expand buttons
+-- No minimize/close/expand buttons.
+-- RESIZE to allow Komorebi to manage the window
+config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.95 -- Slight transparency for sleek look
 config.default_cursor_style = "BlinkingBar" -- Sleek cursor
 
 -- Behavior
 config.enable_scroll_bar = false -- Minimalist, no scrollbar
 config.enable_tab_bar = false
+
+-- Set PowerShell as the default shell on Windows
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	config.default_prog = { "powershell.exe", "-NoLogo" }
+end
+
+-- Enable and configure the status bar
+config.show_new_tab_button_in_tab_bar = false -- Keep tab bar minimal if enabled
+config.status_update_interval = 1000 -- Update every second
+
+-- Function to count windows
+local function get_window_count()
+	local windows = wezterm.get_all_windows()
+	return #windows
+end
+
+-- Customize the right status bar
+wezterm.on("update-right-status", function(window, pane)
+	local window_count = get_window_count()
+	window:set_right_status(wezterm.format({
+		{ Text = "Windows: " .. window_count .. " " },
+	}))
+end)
 
 -- Tmux-like leader key: CTRL-a
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
