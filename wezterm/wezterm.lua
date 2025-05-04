@@ -39,7 +39,7 @@ local function get_window_count()
 end
 
 -- Customize the right status bar
-wezterm.on("update-right-status", function(window, pane)
+wezterm.on("update-right-status", function(window)
 	local window_count = get_window_count()
 	window:set_right_status(wezterm.format({
 		{ Text = "Windows: " .. window_count .. " " },
