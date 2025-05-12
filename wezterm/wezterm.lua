@@ -31,42 +31,26 @@ end
 -- Enable and configure the status bar
 config.show_new_tab_button_in_tab_bar = false -- Keep tab bar minimal if enabled
 config.status_update_interval = 1000 -- Update every second
-
--- Function to count windows
-local function get_window_count()
-	local windows = wezterm.get_all_windows()
-	return #windows
-end
-
--- Customize the right status bar
-wezterm.on("update-right-status", function(window)
-	local window_count = get_window_count()
-	window:set_right_status(wezterm.format({
-		{ Text = "Windows: " .. window_count .. " " },
-	}))
-end)
+config.show_tabs_in_tab_bar = false
 
 -- Tmux-like leader key: CTRL-a
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 
 -- Tmux-inspired keybindings
 config.keys = {
-	-- Pane splitting: CTRL-a | (vertical), CTRL-a - (horizontal)
-	bind("|", "LEADER|SHIFT", wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" })),
-	bind("-", "LEADER", wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" })),
 	-- Pane navigation: CTRL-a h/j/k/l (like tmux/vim)
 	bind("h", "LEADER", wezterm.action.ActivatePaneDirection("Left")),
 	bind("j", "LEADER", wezterm.action.ActivatePaneDirection("Down")),
 	bind("k", "LEADER", wezterm.action.ActivatePaneDirection("Up")),
 	bind("l", "LEADER", wezterm.action.ActivatePaneDirection("Right")),
-	-- Tab management: CTRL-a c (new tab), CTRL-a n/p (next/prev tab)
-	bind("t", "LEADER", wezterm.action.SpawnTab("CurrentPaneDomain")),
-	bind("n", "LEADER", wezterm.action.ActivateTabRelative(1)),
-	bind("p", "LEADER", wezterm.action.ActivateTabRelative(-1)),
+
+	-- Tab management: CTRL-a t (new window)
+	bind("t", "LEADER", wezterm.action.SpawnWindow),
+
 	-- Close pane: CTRL-a x
 	bind("x", "LEADER", wezterm.action.CloseCurrentPane({ confirm = false })),
+
 	-- Send Ctrl-a to terminal if pressed twice (tmux pass-through)
 	bind("a", "LEADER", wezterm.action.SendKey({ key = "a", mods = "CTRL" })),
 }
-
 return config
