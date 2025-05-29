@@ -8,6 +8,7 @@
   "border": true,
   "border_width": 4,
   "border_offset": -1,
+  "async_window_handling": true,
   "theme": {
     "palette": "Catppuccin",
     "name": "Mocha",
@@ -44,7 +45,6 @@
   "bar_configurations": [
     "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor1.json",
     "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor2.json",
-    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor3.json",
-    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor4.json"
+    "$Env:KOMOREBI_CONFIG_HOME/komorebi.bar.monitor3.json"
   ]
 }
