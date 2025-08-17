@@ -21,3 +21,5 @@ Personal Configuration Files
   - Set ```XDG_CONFIG_HOME``` = ```%USERPROFILE%/.config```.
 - Wezterm
   - Set ```XDG_CONFIG_HOME``` = ```%USERPROFILE%/.config```.
+- Yazi
+  - Set ```YAZI_CONFIG_HOME``` = ```%USERPROFILE%/.config/yazi```.
