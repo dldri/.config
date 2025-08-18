@@ -52,11 +52,10 @@ local scheme_colors = {
 
 local colors = {
 	tab_base_color = scheme_colors.catppuccin.mocha.crust,
-	-- tab_base_color = scheme_colors.catppuccin.mocha.flamingo,
-	active_tab_bg_color = scheme_colors.catppuccin.mocha.green,
+	active_tab_bg_color = scheme_colors.catppuccin.mocha.blue,
 	active_tab_fg_color = scheme_colors.catppuccin.mocha.crust,
-	inactive_tab_bg_color = scheme_colors.catppuccin.mocha.blue,
-	inactive_tab_fg_color = scheme_colors.catppuccin.mocha.crust,
+	inactive_tab_bg_color = scheme_colors.catppuccin.mocha.surface0,
+	inactive_tab_fg_color = scheme_colors.catppuccin.mocha.text,
 }
 
 -- Appearance: Catppuccin Mocha with black background
